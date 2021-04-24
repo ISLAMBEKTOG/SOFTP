@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <script type="text/javascript" src="../static/js/user-page.js" th:src="@{/js/user-page.js}"></script>
+    <script type="text/javascript" src="../static/js/user.js" th:src="@{/js/user.js}"></script>
+    <title>User Page</title>
+
+    <style>
+        html {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<!-- Header -->
+<nav class="navbar navbar-dark sticky-top bg-dark" style="height: 45px">
+    <input id="user-hidden-id" type="hidden"/>
+    <p id="header-info" class="navbar-brand"></p>
+    <a class="navbar-brand mb-3" href="/logout">Logout</a>
+</nav>
+
+<div class="user-panel mt-3">
+    <div class="row">
+        <!-- Menu -->
+        <div class="menu col-md-3">
+            <nav class="nav flex-column">
+                <a id="userInfoBtn" class="nav-link btn btn-lg text-primary btn-block text-left">My Profile</a>
+                <a id="userMagazineBtn" class="nav-link active mt-2 btn btn-lg btn-primary btn-block text-left">Magazines</a>
+            </nav>
+        </div>
+
+        <!-- Panel-->
+        <div id="userPanelDiv" class="panel col-md-9">
+
+            <!-- User Panel-->
+            <div id="user-panel">
+
+                <h2 class="mb-3">User information-page</h2>
+
+                <div id="adminCrudPage">
+                    <div class="tab-content mt-3">
+                        <!-- Users Table -->
+                        <div class="tab-pane active">
+                            <h4>About user</h4>
+
+                            <table class="table table-striped" id="adminInfoTable">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Age</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                </tr>
+                                </thead>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Magazine panel -->
+            <div id="user-magazine-panel">
+
+                <h2 class="mb-3">Magazine page</h2>
+
+                <div id="magazinePage">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#magazinePanelTable" data-toggle="tab">Magazine table</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content mt-3">
+                        <!-- Magazine Table -->
+                        <div class="tab-pane active" id="magazinePanelTable">
+                            <h4>About magazine</h4>
+
+                            <table class="table table-striped" id="userMagazineTable">
+                                <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Name</th>
+                                    <th>Author</th>
+                                    <th>Edition</th>
+                                    <th>Publisher</th>
+                                    <th>Language</th>
+                                    <th>Type</th>
+                                    <th>Page</th>
+                                    <th>Reader</th>
+                                    <th>Status</th>
+                                </tr>
+                                </thead>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
